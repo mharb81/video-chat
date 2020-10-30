@@ -1,0 +1,42 @@
+ion-content {
+  --overflow: hidden;
+}
+
+#video-grid {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+// video {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   margin: 0;
+//   padding: 0;
+// }
+
+#myVideo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  transform: rotateY(180deg);
+}
+
+.call-still-open {
+  background: green;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.call-still-open ion-button {
+  --background: transparent;
+}

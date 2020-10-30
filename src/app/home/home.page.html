@@ -1,0 +1,88 @@
+<ion-header>
+  <div
+    *ngIf="callService.isCallOpen === true"
+    class="call-still-open"
+    (click)="toggleBackground()"
+  >
+    <div>Call ongoing...</div>
+    <div style="flex: 1"></div>
+    <div>
+      <ion-buttons>
+        <ion-button slot="icon-only">
+          <ion-icon slot="icon-only" name="chevron-up-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+  <ion-toolbar>
+    <ion-title> Home </ion-title>
+  </ion-toolbar>
+</ion-header>
+<!--
+<ion-content>
+  <div id="errorMsg"></div>
+
+  <video
+    id="partner-video"
+    (click)="swapVideo('my-video')"
+    autoplay
+    playsinline
+    [ngClass]="{'top-video': topVideoFrame === 'partner-video', 'main-video': topVideoFrame != 'partner-video'}"
+  ></video>
+  <video
+    id="my-video"
+    (click)="swapVideo('partner-video')"
+    autoplay
+    playsinline
+    [ngClass]="{'top-video': topVideoFrame === 'my-video', 'main-video': topVideoFrame != 'my-video'}"
+  ></video>
+
+  <ion-row nowrap>
+    <ion-button (click)="init()">Login As: </ion-button>
+    <ion-item>
+      <ion-input
+        type="text"
+        [(ngModel)]="userId"
+        placeholder="enter your nick name"
+      ></ion-input>
+    </ion-item>
+  </ion-row>
+
+  <ion-row nowrap>
+    <ion-button (click)="call()">Call To: </ion-button>
+    <ion-item>
+      <ion-input
+        type="text"
+        [(ngModel)]="partnerId"
+        placeholder="your partner nick name"
+      ></ion-input>
+    </ion-item>
+  </ion-row>
+</ion-content> -->
+
+<ion-content>
+  <!-- <iframe
+    allow="camera;microphone"
+    title="W3Schools Free Online Web Tutorials"
+  ></iframe> -->
+
+  <ion-button style="position: absolute; right: 0" (click)="toggleBackground()">
+    Call
+  </ion-button>
+
+  <div style="position: absolute; bottom: 0; height: 140px; width: 100%">
+    chats here
+  </div>
+  <ion-input
+    id="input"
+    style="
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      height: 50px;
+      background: transparent;
+    "
+    (ionBlur)="inputBlur($event, 'input')"
+    (ionFocus)="inputFocus($event, 'input')"
+  ></ion-input>
+</ion-content>
